@@ -1,0 +1,5 @@
+com.baseframework.PageObjects
+com.baseframework.Runner
+com.baseframework.StepDefinition
+com.baseframework.automationFramework
+com.baseframework.constants

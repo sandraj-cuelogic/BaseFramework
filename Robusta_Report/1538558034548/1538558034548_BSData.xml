@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EHSmellReport>
+  <Summary>
+    <ProjectName>BaseFramework</ProjectName>
+    <DateTime>10/3/18 2:43:54 PM IST</DateTime>
+  </Summary>
+  <EHSmellList>
+    <EmptyCatchBlock>0</EmptyCatchBlock>
+    <DummyHandler>20</DummyHandler>
+    <UnprotectedMainProgram>2</UnprotectedMainProgram>
+    <NestedTryStatement>5</NestedTryStatement>
+    <CarelessCleanup>7</CarelessCleanup>
+    <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+    <Total>34</Total>
+  </EHSmellList>
+  <CodeInfoList>
+    <LOC>1348</LOC>
+    <TryNumber>26</TryNumber>
+    <CatchNumber>26</CatchNumber>
+    <FinallyNumber>3</FinallyNumber>
+  </CodeInfoList>
+  <AllPackageList>
+    <Package>
+      <ID>2</ID>
+      <LOC>912</LOC>
+      <EmptyCatchBlock>0</EmptyCatchBlock>
+      <DummyHandler>13</DummyHandler>
+      <UnprotectedMainProgram>2</UnprotectedMainProgram>
+      <NestedTryStatement>5</NestedTryStatement>
+      <CarelessCleanup>7</CarelessCleanup>
+      <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+      <PackageTotal>27</PackageTotal>
+      <HrefPackageName>#java/com.baseframework.automationFramework</HrefPackageName>
+      <PackageName>java/com.baseframework.automationFramework</PackageName>
+    </Package>
+    <Package>
+      <ID>4</ID>
+      <LOC>336</LOC>
+      <EmptyCatchBlock>0</EmptyCatchBlock>
+      <DummyHandler>7</DummyHandler>
+      <UnprotectedMainProgram>0</UnprotectedMainProgram>
+      <NestedTryStatement>0</NestedTryStatement>
+      <CarelessCleanup>0</CarelessCleanup>
+      <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+      <PackageTotal>7</PackageTotal>
+      <HrefPackageName>#java/com.baseframework.Runner</HrefPackageName>
+      <PackageName>java/com.baseframework.Runner</PackageName>
+    </Package>
+    <Package>
+      <ID>0</ID>
+      <LOC>27</LOC>
+      <EmptyCatchBlock>0</EmptyCatchBlock>
+      <DummyHandler>0</DummyHandler>
+      <UnprotectedMainProgram>0</UnprotectedMainProgram>
+      <NestedTryStatement>0</NestedTryStatement>
+      <CarelessCleanup>0</CarelessCleanup>
+      <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+      <PackageTotal>0</PackageTotal>
+      <PackageName>java/com.baseframework.PageObjects</PackageName>
+      <HrefPackageName>#Package_List</HrefPackageName>
+    </Package>
+    <Package>
+      <ID>1</ID>
+      <LOC>58</LOC>
+      <EmptyCatchBlock>0</EmptyCatchBlock>
+      <DummyHandler>0</DummyHandler>
+      <UnprotectedMainProgram>0</UnprotectedMainProgram>
+      <NestedTryStatement>0</NestedTryStatement>
+      <CarelessCleanup>0</CarelessCleanup>
+      <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+      <PackageTotal>0</PackageTotal>
+      <PackageName>java/com.baseframework.StepDefinition</PackageName>
+      <HrefPackageName>#Package_List</HrefPackageName>
+    </Package>
+    <Package>
+      <ID>3</ID>
+      <LOC>15</LOC>
+      <EmptyCatchBlock>0</EmptyCatchBlock>
+      <DummyHandler>0</DummyHandler>
+      <UnprotectedMainProgram>0</UnprotectedMainProgram>
+      <NestedTryStatement>0</NestedTryStatement>
+      <CarelessCleanup>0</CarelessCleanup>
+      <ExceptionThrownFromFinallyBlock>0</ExceptionThrownFromFinallyBlock>
+      <PackageTotal>0</PackageTotal>
+      <PackageName>java/com.baseframework.constants</PackageName>
+      <HrefPackageName>#Package_List</HrefPackageName>
+    </Package>
+  </AllPackageList>
+  <PackageList>
+    <Package>
+      <PackageName>java/com.baseframework.automationFramework</PackageName>
+      <ClassList>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#56#</LinkCode>
+          <MethodName>main</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>56</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#57#</LinkCode>
+          <MethodName>main</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>57</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#114#</LinkCode>
+          <MethodName>modifyFile</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>114</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#106#</LinkCode>
+          <MethodName>modifyFile</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>106</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#115#</LinkCode>
+          <MethodName>modifyFile</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>115</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#37#</LinkCode>
+          <MethodName>main</MethodName>
+          <SmellType>Nested Try Statement</SmellType>
+          <Line>37</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#109#</LinkCode>
+          <MethodName>modifyFile</MethodName>
+          <SmellType>Nested Try Statement</SmellType>
+          <Line>109</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>TestRunnerBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/TestRunnerBuilder.java#14#</LinkCode>
+          <MethodName>main</MethodName>
+          <SmellType>Unprotected Main Program</SmellType>
+          <Line>14</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#48#</LinkCode>
+          <MethodName>writeScreenshotToFile</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>48</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#34#</LinkCode>
+          <MethodName>createFile</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>34</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#49#</LinkCode>
+          <MethodName>writeScreenshotToFile</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>49</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#98#</LinkCode>
+          <MethodName>onTestFailure</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>98</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#163#</LinkCode>
+          <MethodName>customScreenshot</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>163</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#190#</LinkCode>
+          <MethodName>customScreenshotOnFail</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>190</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>SaveScreenShots.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/SaveScreenShots.java#83#</LinkCode>
+          <MethodName>onTestFailure</MethodName>
+          <SmellType>Nested Try Statement</SmellType>
+          <Line>83</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>AutomationLog.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/AutomationLog.java#36#</LinkCode>
+          <MethodName>AutomationLog</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>36</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#107#</LinkCode>
+          <MethodName>createFileWithContent</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>107</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#108#</LinkCode>
+          <MethodName>createFileWithContent</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>108</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#188#</LinkCode>
+          <MethodName>replaceContent</MethodName>
+          <SmellType>Careless Cleanup</SmellType>
+          <Line>188</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#110#</LinkCode>
+          <MethodName>createFileWithContent</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>110</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#131#</LinkCode>
+          <MethodName>modifyFileContent</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>131</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#143#</LinkCode>
+          <MethodName>modifyFileContent</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>143</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#180#</LinkCode>
+          <MethodName>replaceContent</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>180</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#189#</LinkCode>
+          <MethodName>replaceContent</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>189</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#135#</LinkCode>
+          <MethodName>modifyFileContent</MethodName>
+          <SmellType>Nested Try Statement</SmellType>
+          <Line>135</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#183#</LinkCode>
+          <MethodName>replaceContent</MethodName>
+          <SmellType>Nested Try Statement</SmellType>
+          <Line>183</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>FeatureBuilder.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/main/java/com/baseframework/automationFramework/FeatureBuilder.java#20#</LinkCode>
+          <MethodName>main</MethodName>
+          <SmellType>Unprotected Main Program</SmellType>
+          <Line>20</Line>
+        </SmellData>
+      </ClassList>
+      <Total>27</Total>
+    </Package>
+    <Package>
+      <PackageName>java/com.baseframework.Runner</PackageName>
+      <ClassList>
+        <SmellData>
+          <ClassName>TestRunner.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/TestRunner.java#35#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>35</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>chrome_EDFHomePageNew.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/chrome_EDFHomePageNew.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>ie_EDFHomePageNew.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/ie_EDFHomePageNew.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>EDFHomePage2.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/EDFHomePage2.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>EDFHomePage1.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/EDFHomePage1.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>EDFHomePage.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/EDFHomePage.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+        <SmellData>
+          <ClassName>firefox_EDFHomePageNew.java</ClassName>
+          <State>0</State>
+          <LinkCode>#/BaseFramework/src/test/java/com/baseframework/Runner/firefox_EDFHomePageNew.java#40#</LinkCode>
+          <MethodName>afterTest</MethodName>
+          <SmellType>Dummy Handler</SmellType>
+          <Line>40</Line>
+        </SmellData>
+      </ClassList>
+      <Total>7</Total>
+    </Package>
+  </PackageList>
+</EHSmellReport>
+
