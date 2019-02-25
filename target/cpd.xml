@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="45" tokens="145">
+      <file line="152"
+            path="C:\Users\sj19366\Documents\workspace\BaseFramework-Git\BaseFramework\src\main\java\com\baseframework\automationFramework\FeatureBuilder.java"/>
+      <file line="78"
+            path="C:\Users\sj19366\Documents\workspace\BaseFramework-Git\BaseFramework\src\main\java\com\baseframework\automationFramework\TestRunnerBuilder.java"/>
+      <codefragment><![CDATA[	static void replaceContent(String filePath, String oldString, String newString) {
+		File fileToBeModified = new File(filePath);
+		String oldContent = "";
+		BufferedReader reader = null;
+		FileWriter writer = null;
+
+		try {
+			reader = new BufferedReader(new FileReader(fileToBeModified));
+
+			// Reading all the lines of input text file into oldContent
+
+			String line = reader.readLine();
+
+			while (line != null) {
+				oldContent = oldContent + line + System.lineSeparator();
+
+				line = reader.readLine();
+			}
+
+			// Replacing oldString with newString in the oldContent
+
+			String newContent = oldContent.replaceAll(oldString, newString);
+
+			// Rewriting the input text file with newContent
+
+			writer = new FileWriter(fileToBeModified);
+
+			writer.write(newContent);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				// Closing the resources
+
+				reader.close();
+
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+}]]></codefragment>
+   </duplication>
+</pmd-cpd>
