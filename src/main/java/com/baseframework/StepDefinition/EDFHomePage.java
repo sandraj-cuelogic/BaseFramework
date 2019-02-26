@@ -7,10 +7,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.baseframework.PageObjects.EDFHomePageElements;
 import com.baseframework.automationFramework.AppDriver;
 import com.baseframework.automationFramework.AutomationLog;
+import com.baseframework.automationFramework.TestLinkStatusUpdate;
 import com.baseframework.constants.BrowserDetails;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.it.Date;
+import testlink.api.java.client.TestLinkAPIResults;
+
+import java.sql.Time;
+
+import org.dbfacade.testlink.eclipse.plugin.views.TestLinkAction;
 import org.junit.Assert;
 
 
@@ -25,6 +32,7 @@ public class EDFHomePage {
 	static WebDriverWait wait;
 	// Declare Page Object class
 	static EDFHomePageElements eDFHomePageElements;
+	TestLinkStatusUpdate testlink = new TestLinkStatusUpdate();
 
 	
 	@Given("^I navigate to the edfstage url in \"([^\"]*)\"$")
@@ -52,6 +60,7 @@ public class EDFHomePage {
 	@Then("^confirm that user has reached EDF's landing page$")
 	public void confirm_that_user_has_reached_EDF_s_landing_page() throws Throwable {
 		Assert.assertTrue("User has reached EDF's landing page", title.contains("Enterprise Delivery Framework"));
+		testlink.updateTestLinkResultWithExecutionNote("Sprint 1", "Commit ID - 1", "Test Case has passed using automated execution", "TL-1", "", TestLinkAPIResults.TEST_PASSED);
 		log.info("User has reached the landing page");
 	}
 }
