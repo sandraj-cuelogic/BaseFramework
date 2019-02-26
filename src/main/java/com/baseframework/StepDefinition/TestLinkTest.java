@@ -18,7 +18,7 @@ public class TestLinkTest {
 	public static String BUILD_NAME = "Commit ID - 1";
 	public static String SERVER_URL = "http://10.1.6.196/index.php"; // your testlink server url
 
-	@org.junit.Test
+//	@org.junit.Test
 	public void TestOne() throws Exception {
 		String result = "";
 		String exception = null;
@@ -56,6 +56,13 @@ public class TestLinkTest {
 		System.out.println(testlinkAPIClient.getDevKey() + "***************************************");
 //		testlinkAPIClient.reportTestCaseResult(PROJECT_NAME, PLAN_NAME,testCase, BUILD_NAME, exception, result);
 //		testlinkAPIClient.reportTCResult(testCase, "", PLAN_NAME, result, "", "", BUILD_NAME, "", "", "", "", "", "", "");
+	}
+	
+	public static void main(String[] args) throws TestLinkAPIException, MalformedURLException {
+		System.out.println("its in here");
+		TestLinkTest test = new TestLinkTest();
+		test.updateTestLinkResult("", "", "");
+		System.out.println("it left");
 	}
 	
 
