@@ -1,6 +1,5 @@
 package com.baseframework.Runner;
 
-
 import java.io.File;
 
 import org.junit.AfterClass;
@@ -17,7 +16,8 @@ import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-@CucumberOptions(features = "Feature", glue = { "com.baseframework.StepDefinition" }, plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
+@CucumberOptions(features = "Feature", glue = { "com.baseframework.StepDefinition" }, plugin = {
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
 @RunWith(Cucumber.class)
 public class TestRunner {
 	@BeforeClass
