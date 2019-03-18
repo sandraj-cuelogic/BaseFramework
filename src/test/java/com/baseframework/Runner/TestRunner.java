@@ -17,7 +17,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(features = "Feature", glue = { "com.baseframework.StepDefinition" }, plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true,
+				tags = "@chrome_EDFHomePageNew, @ie_EDFHomePageNew")
+
+
 @RunWith(Cucumber.class)
 public class TestRunner {
 	@BeforeClass
@@ -37,6 +40,14 @@ public class TestRunner {
 			e.printStackTrace();
 		}
 		Reporter.loadXMLConfig(new File(AutomationConfiguration.getConfigurationValueForProperty("reportConfigPath")));
-		driver.close();
+		if(driver != null) {
+			driver.quit();
+			System.out.println("WebDriver was found and quit() was called");
+		}
+		else {
+			System.out.println("WebDriver was not found");
+		}
+		
+		
 	}
 }

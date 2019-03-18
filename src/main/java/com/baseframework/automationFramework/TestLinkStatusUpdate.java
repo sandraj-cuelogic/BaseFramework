@@ -35,4 +35,12 @@ public class TestLinkStatusUpdate {
 		testlinkAPIClient.reportTestCaseResult(PLAN_ID, testCaseID, BUILD_ID, bugID, guess, execNotes, result);
 	}
 
+		public void updateTestLinkResultUsingIDs(int testPlanID, int testCaseID, int buildID, String execNotes, String testResultStatus) throws TestLinkAPIException{
+
+		TestLinkAPIClient testlinkAPIClient = new TestLinkAPIClient(DEV_KEY, SERVER_URL);
+		AutomationLog.info("TestLink Connection has been established : " +testlinkAPIClient.isConnected);
+		//With comment and bugID
+		testlinkAPIClient.reportTestCaseResult(testPlanID, testCaseID, buildID, execNotes, testResultStatus);
+		}
+
 }
