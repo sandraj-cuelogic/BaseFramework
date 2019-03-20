@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(features = "API_Features", glue = { "com.baseframework.API.StepDefinition" }, plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/API_Report.html" }, monochrome = true)
 
 @RunWith(Cucumber.class)
 public class APIRunner {
