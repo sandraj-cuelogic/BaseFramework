@@ -7,6 +7,8 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.baseframework.automationFramework.AppDriver;
 import com.baseframework.automationFramework.AutomationConfiguration;
 import com.baseframework.automationFramework.SaveScreenShots;
@@ -17,8 +19,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(features = "Feature", glue = { "com.baseframework.StepDefinition" }, plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true,
-				tags = "@chrome_EDFHomePageNew, @ie_EDFHomePageNew")
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
 
 
 @RunWith(Cucumber.class)
@@ -28,6 +29,10 @@ public class TestRunner {
 		System.out.println("test case is about start execution");
 	}
 
+	
+
+	public static ExtentHtmlReporter htmlReporter;
+    
 	@AfterClass
 	public static void afterTest() {
 		WebDriver driver = AppDriver.getInstance();
@@ -39,6 +44,10 @@ public class TestRunner {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		BrowserDetails browserDetails = new BrowserDetails();
+		
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "target/"+browserDetails.getBrowserName()+".html");
+
 		Reporter.loadXMLConfig(new File(AutomationConfiguration.getConfigurationValueForProperty("reportConfigPath")));
 		if(driver != null) {
 			driver.quit();
