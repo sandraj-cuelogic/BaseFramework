@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "Feature", 
 		glue = { "com.baseframework.StepDefinition" }, 
-		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, 
+		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/TestRunner_Report.html" }, 
 		monochrome = true,
 		tags = "@TestRunner")
 		
@@ -29,7 +29,6 @@ public class TestRunner {
 	public static void beforeTest() {
 		System.out.println("test case is about start execution");
 	}
-
 	@AfterClass
 	public static void afterTest() {
 		WebDriver driver = AppDriver.getInstance();
@@ -41,8 +40,6 @@ public class TestRunner {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
 		Reporter.loadXMLConfig(new File(AutomationConfiguration.getConfigurationValueForProperty("reportConfigPath")));
 		driver.close();
 	}
