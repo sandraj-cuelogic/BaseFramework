@@ -74,7 +74,7 @@ public class SaveScreenShots {
 			// System.out.println("My Testcase name is ="+testcasename);
 			// String filefolder="./test-output"+"/Snap/"+folderDateFormat+"/";
 			String filefolder = AutomationConfiguration
-					.getConfigurationValueForProperty("ScreenShotFolder")
+					.getConfigurationValueForProperty("ReportsFolder")
 					+ "//Snap//" + folderDateFormat + "//";
 			// Creating folders and files
 			File screenshot = new File(filefolder + fileDateFormet + ".jpeg");
@@ -134,7 +134,7 @@ public class SaveScreenShots {
 		 */
 	}
 
-	public static void customScreenshot() {
+	public static void customScreenshot(String screenShotName) {
 		try {
 			BrowserDetails browserDetails = new BrowserDetails();
 
@@ -145,8 +145,9 @@ public class SaveScreenShots {
 			SimpleDateFormat dateFormatForFoldername = new SimpleDateFormat(
 					"yyyy-MM-dd");// dd/MM/yyyy
 			Date currentDate = new Date();
-			String folderDateFormat = dateFormatForFoldername
-					.format(currentDate);
+			SimpleDateFormat folderDateFormat = new SimpleDateFormat(
+					"yyyy-MM-dd");
+			String folderDateFormatName =  folderDateFormat.format(currentDate);
 			// extracting date and time for snapshot file
 			SimpleDateFormat dateFormatForFileName = new SimpleDateFormat(
 					"yyyy-MM-dd HH-mm-ss");// dd/MM/yyyy
@@ -154,11 +155,10 @@ public class SaveScreenShots {
 			// String
 			// filefolder="./target"+"/cucumber-html-reports/"+"/Snap/"+"/CustomScreenShot/"+folderDateFormat+"/";
 			String filefolder = AutomationConfiguration
-					.getConfigurationValueForProperty("ScreenShotFolder")
-					+ "//Snap//" + folderDateFormat + "//";
+					.getConfigurationValueForProperty("ReportsFolder")+"//" + folderDateFormatName + "//Snap" +  "//";
 
 			// Creating folders and files
-			File screenshot = new File(filefolder + fileDateFormet + ".jpeg");
+			File screenshot = new File(filefolder + BrowserDetails.browserName +"_"+ fileDateFormet+"_"+ screenShotName +".jpeg");
 			FileUtils.copyFile(screenShot, new File(screenshot.getPath()));
 		} catch (Exception ex) {
 			System.err.println("Unable to capture screenshot...");

@@ -1,6 +1,8 @@
 package com.baseframework.Runner;
 
+
 import java.io.File;
+import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -10,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.baseframework.automationFramework.AppDriver;
 import com.baseframework.automationFramework.AutomationConfiguration;
+import com.baseframework.automationFramework.CopyExecutionReportToReportsPath;
 import com.baseframework.automationFramework.SaveScreenShots;
 import com.baseframework.constants.BrowserDetails;
 import com.cucumber.listener.Reporter;
@@ -18,50 +21,51 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import net.bytebuddy.asm.Advice.This;
 
-@CucumberOptions(features = "Feature", glue = { "com.baseframework.StepDefinition" }, plugin = {
-		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true, tags = "~@ignore")
-
+@CucumberOptions(
+		features = "Feature", 
+		glue = { "com.baseframework.StepDefinition" }, 
+		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/ie_LucencyLogin_Report.html" }, 
+		monochrome = true,
+		tags = "@ie_LucencyLogin")
+		
 @RunWith(Cucumber.class)
-public class TestRunner {
+
+public class ie_LucencyLogin {
 	@BeforeClass
 	public static void beforeTest() {
 		System.out.println("test case is about start execution");
-		if(This.class.getName().contains("_")) {
-			String[] browserName = This.class.getName().split("_");
+		String className = "ie_LucencyLogin";
+		if(className.contains("_")) {
+			String[] browserName = className.split("_");
 			String browserNameString = browserName[0];
 			System.out.println(browserNameString);
 			BrowserDetails browserDetails = new BrowserDetails();
 			browserDetails.setBrowserName(browserNameString);
-			System.out.println(BrowserDetails.browserName);
+			System.out.println(BrowserDetails.browserName  + " ______________________ from beforeTest method");
+			
+//			WebDriver driver = AppDriver.getInstance();
 		} else {
 			System.out.println("No underscore in class name");
 		}
 		
 	}
-
 	@AfterClass
-	public static void afterTest() {
-
+	public static void afterTest() throws IOException {
 		WebDriver driver = AppDriver.getInstance();
 		SaveScreenShots saveScreenShots = new SaveScreenShots();
 		saveScreenShots.customScreenshot("Final Screenshot");
 		try {
 			Thread.sleep(10000);
-		} catch (InterruptedException e) { // TODO
-			// Auto-generated catch block
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-//		BrowserDetails browserDetails = new BrowserDetails();
-
 		Reporter.loadXMLConfig(new File(AutomationConfiguration.getConfigurationValueForProperty("reportConfigPath")));
-
-		if (driver != null) {
-			driver.quit();
-			System.out.println("WebDriver was found and quit() was called");
-		} else {
-			System.out.println("WebDriver was not found");
-		}
-
+		driver.close();
+		
+				
+		CopyExecutionReportToReportsPath copyReports = new CopyExecutionReportToReportsPath();
+		copyReports.copyReportToReportsPath("ie_LucencyLogin_Report.html");
+		
 	}
 }

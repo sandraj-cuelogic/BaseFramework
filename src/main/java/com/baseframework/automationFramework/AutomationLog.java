@@ -1,5 +1,6 @@
 package com.baseframework.automationFramework;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -10,7 +11,9 @@ import java.util.logging.FileHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
-import java.util.logging.Logger;
+import java.util.logging.Logger;import org.apache.poi.ss.formula.ptg.DeletedArea3DPtg;
+
+import com.baseframework.constants.BrowserDetails;
 
 public class AutomationLog {
 	private Logger logger = Logger.getLogger(AutomationLog.class.getSimpleName());
@@ -29,10 +32,16 @@ public class AutomationLog {
 
 		// This block configure the logger with handler and formatter
 		try {
-			Date date = new Date();
-			long timeStamp = date.getTime();
-			fh = new FileHandler(AutomationConfiguration.getConfigurationValueForProperty("Logfile")+"//"+timeStamp
-					+".log");
+
+			String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+			String dateTime = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format( new Date());
+			File directory = new File((AutomationConfiguration.getConfigurationValueForProperty("ReportsFolder")+"/"+date.toString()));
+			    if (! directory.exists()){
+		        directory.mkdir();
+		    }
+	
+			
+			fh = new FileHandler(directory+"/"+BrowserDetails.browserName+"_"+dateTime+".log");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

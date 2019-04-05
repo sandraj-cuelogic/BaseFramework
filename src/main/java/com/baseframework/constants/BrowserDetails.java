@@ -6,6 +6,7 @@ public class BrowserDetails {
 	public static String sessionID;
 	
 	public String getBrowserName(){
+		
 		return browserName;
 	}
 	
