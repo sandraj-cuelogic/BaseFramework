@@ -1,0 +1,5 @@
+01/04/2019 07:18:17.086 - [Lucency] - [INFO] - java.util.logging.ConsoleHandler@64a294a6
+01/04/2019 07:18:17.096 - [Lucency] - [INFO] - [ TestRunnerBuilder : main ] TestRunner file created : chrome_LucencyLogin
+01/04/2019 07:18:17.146 - [Lucency] - [INFO] - [ TestRunnerBuilder : main ] TestRunner file created : firefox_LucencyLogin
+01/04/2019 07:18:17.156 - [Lucency] - [INFO] - [ TestRunnerBuilder : main ] TestRunner file created : ie_LucencyLogin
+01/04/2019 07:18:17.163 - [Lucency] - [SEVERE] - [ TestRunnerBuilder : main ] Runner files not created

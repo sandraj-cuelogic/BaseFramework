@@ -26,7 +26,7 @@
 	</style>
 </head>
 
-	<body class='extent standard default hide-overflow bdd-report'>
+	<body class='extent standard default hide-overflow '>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 20, 2019 02:48:36 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 18, 2019 04:31:30 PM</span>
 				</a>
 			</li>
 			<li>
@@ -77,8 +77,7 @@
 					<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li class='divider'></li>
+										<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
 			</div>
@@ -90,7 +89,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@chrome_EDFHomePageNew</a></li>
+					<li><a href='#'>@smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -131,100 +130,49 @@
 
 <div id='test-view-charts' class='subview-full'>
 	<div id='charts-row' class='row nm-v nm-h'>
-		<div class='col s12 m4 l4 np-h'>
+		<div class='col s12 m6 l6 np-h'>
 			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Features</div>
+				<div class='left panel-name'>Tests</div>
 				<div class='chart-box'>
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
 		
-		<div class='col s12 m4 l4 np-h'>
-			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Scenarios</div>
-				<div class='chart-box'>
-					<canvas id='child-analysis' width='100' height='80'></canvas>
-				</div>
-				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
-				</div>
-				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-				</div>
-			</div>
-		</div>
 		
-		<div class='col s12 m4 l4 np-h'>
-			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Steps</div>
-				<div class='chart-box'>
-					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
-				</div>
-				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
-				</div>
-				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 
 	<div class='subview-left left'>
 		
 		<div class='view-summary'>
-			<h5>Features</h5>
+			<h5>Tests</h5>
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>EDF Search Results</span>
-						<span class='test-time'>Feb 20, 2019 02:48:36 PM</span>
+						<span class='test-name'>Verify Account Manager module</span>
+						<span class='test-time'>Apr 18, 2019 04:31:30 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 15s+432ms</span>
-	<div class='desc'>
-		<b>ScenarioOutline</b>
-		<span class="desc-text">Navigate to the edfstage url and confirm that you have reached its landing page</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class='category-list'>
-				<span class='category label white-text'>@chrome_EDFHomePageNew</span>
-			</div>
-			
-			<b>Scenario</b>
-			
-			<span class="bdd-step-name">Navigate to the edfstage url and confirm that you have reached its landing page</span>
-			
-				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given I navigate to the edfstage url in "chrome"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When the page has the title as "Enterprise Delivery Framework"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node then pass' status='pass'><b>Then</b>
-						<span class="bdd-step-name">Then confirm that user has reached EDF's landing page</span>
-							<div class='pre'>passed</div>
-					</li>
-				</ul>
-		</li>
-	</ul>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 18, 2019 04:31:30 PM</span>
+	<span class='label end-time'>Apr 18, 2019 04:31:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>@smoke</span>
+			</div>
+	</div>
 					</div>
 				</li>
 			</ul>
@@ -279,14 +227,14 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@chrome_EDFHomePageNew</span>
+						<span class='category-name'>@smoke</span>
 						<span class='category-status right'>
-							<span class='label pass'>2</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -302,13 +250,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 20, 2019 02:48:36 PM</td>
-										<td class='linked' test-id='1'>EDF Search Results</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Feb 20, 2019 02:48:36 PM</td>
-										<td class='linked' test-id='3'>EDF Search Results.Navigate to the edfstage url and confirm that you have reached its landing page.Navigate to the edfstage url and confirm that you have reached its landing page</td>
+										<td>Apr 18, 2019 04:31:30 PM</td>
+										<td class='linked' test-id='1'>Verify Account Manager module</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -336,38 +279,32 @@
 		<div class='row'>
 			<div class='col s2'>
 				<div class='card-panel r'>
-					Features
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Scenarios
+					Tests
 					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>0</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 20, 2019 02:48:36 PM</div>
+					<div class='panel-lead'>Apr 18, 2019 04:31:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 20, 2019 02:49:03 PM</div>
+			 		<div class='panel-lead'>Apr 18, 2019 04:31:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 26s+957ms</div>
+					<div class='panel-lead'>0h 0m 16s+995ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -383,8 +320,8 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@chrome_EDFHomePageNew</td>
-							<td>2</td>
+							<td>@smoke</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -412,7 +349,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -421,7 +358,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 3,
+				passGrandChild: 0,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

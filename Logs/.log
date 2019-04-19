@@ -1,0 +1,11 @@
+03/04/2019 06:52:02.586 - [Lucency] - [INFO] - java.util.logging.ConsoleHandler@f79a760
+03/04/2019 06:52:02.619 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"175.127.179.87"}
+03/04/2019 06:52:09.342 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"168.45.70.254"}
+03/04/2019 06:52:10.085 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"110.97.121.119"}
+03/04/2019 06:52:10.812 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"29.166.22.59"}
+03/04/2019 06:52:11.492 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"57.236.37.127"}
+03/04/2019 06:52:12.120 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"249.164.165.60"}
+03/04/2019 06:52:12.816 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"23.140.204.166"}
+03/04/2019 06:52:13.492 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"198.170.36.28"}
+03/04/2019 06:52:14.176 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"3.124.167.181"}
+03/04/2019 06:52:14.834 - [Lucency] - [INFO] - [ CreateSessionAPI : createSessionUsingCampaigns ] {"ip":"185.13.95.229"}

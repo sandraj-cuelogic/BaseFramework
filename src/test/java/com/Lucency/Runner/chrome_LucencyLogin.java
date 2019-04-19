@@ -1,4 +1,4 @@
-package com.baseframework.Runner;
+package com.Lucency.Runner;
 
 
 import java.io.File;
@@ -9,12 +9,12 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import com.Lucency.Utilities.AppDriver;
+import com.Lucency.Utilities.AutomationConfiguration;
+import com.Lucency.Utilities.CopyExecutionReportToReportsPath;
+import com.Lucency.Utilities.SaveScreenShots;
+import com.Lucency.constants.BrowserDetails;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.baseframework.automationFramework.AppDriver;
-import com.baseframework.automationFramework.AutomationConfiguration;
-import com.baseframework.automationFramework.CopyExecutionReportToReportsPath;
-import com.baseframework.automationFramework.SaveScreenShots;
-import com.baseframework.constants.BrowserDetails;
 import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
@@ -24,17 +24,17 @@ import net.bytebuddy.asm.Advice.This;
 @CucumberOptions(
 		features = "Feature", 
 		glue = { "com.baseframework.StepDefinition" }, 
-		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/TestRunner_Report.html" }, 
+		plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/chrome_LucencyLogin_Report.html" }, 
 		monochrome = true,
-		tags = "@TestRunner")
+		tags = "@chrome_LucencyLogin")
 		
 @RunWith(Cucumber.class)
 
-public class TestRunner {
+public class chrome_LucencyLogin {
 	@BeforeClass
 	public static void beforeTest() {
 		System.out.println("test case is about start execution");
-		String className = "TestRunner";
+		String className = "chrome_LucencyLogin";
 		if(className.contains("_")) {
 			String[] browserName = className.split("_");
 			String browserNameString = browserName[0];
@@ -65,7 +65,7 @@ public class TestRunner {
 		
 				
 		CopyExecutionReportToReportsPath copyReports = new CopyExecutionReportToReportsPath();
-		copyReports.copyReportToReportsPath("TestRunner_Report.html");
+		copyReports.copyReportToReportsPath("chrome_LucencyLogin_Report.html");
 		
 	}
 }
